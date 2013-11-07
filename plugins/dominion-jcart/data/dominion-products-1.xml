@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<produkte><id group_id="1" product_id="1"><info><![CDATA[Example product description]]></info><price><![CDATA[0.00]]></price><product_name><![CDATA[example-product]]></product_name><product_image><![CDATA[no-image]]></product_image><product_default_qty><![CDATA[1]]></product_default_qty></id><indexbyname><index><![CDATA[1]]></index></indexbyname><indexbyprice><index><![CDATA[1]]></index></indexbyprice></produkte>
