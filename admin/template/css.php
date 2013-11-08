@@ -164,6 +164,7 @@ html {
 #pages .wrapper .nav li a.pages,
 #menu-manager .wrapper .nav li a.pages,
 #plugins .wrapper .nav li a.plugins,
+#load .wrapper .products li a.products,
 #settings .wrapper .nav li a.settings,
 #components .wrapper .nav li a.theme,
 #theme .wrapper .nav li a.theme,

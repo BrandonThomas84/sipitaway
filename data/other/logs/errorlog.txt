@@ -1,1 +1,2 @@
 [07-Nov-2013 10:42:15 America/Los_Angeles] PHP Warning:  mail(): Failed to connect to mailserver at &quot;127.0.0.1&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() in C:\Users\Brandon Thomas\Documents\GitHub\simplecms\admin\inc\basic.php on line 158
+[07-Nov-2013 17:50:08 America/Los_Angeles] PHP Notice:  Undefined variable: plugin_class in C:\Users\Brandon Thomas\Documents\GitHub\sipitaway\admin\template\include-nav.php on line 37

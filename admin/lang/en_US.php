@@ -46,6 +46,7 @@ $i18n = array(
 "SELECT_LANGUAGE"		=>  "Select your language",
 "CONTINUE_SETUP" 		=>  "Continue with Setup",
 "DOWNLOAD_LANG" 		=>  "Download Languages",
+"TAB_PRODUCTS" 			=>  "Products",
 
 /* 
  * For: pages.php

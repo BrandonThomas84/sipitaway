@@ -17,11 +17,33 @@ if (cookie_check()) {
 
 //determine page type if plugin is being shown
 if (get_filename_id() == 'load') {
-	$plugin_class = $plugin_info[$plugin_id]['page_type'];
+	
+	if(isset($_GET['id'])){
+		
+		//checking for custom tabs
+		$pageArray = array(
+			"dominion-jcart" =>	"products"
+		);
+
+		//checking if page is in custom tabs
+		if(array_key_exists($_GET['id'], $pageArray)){
+
+			//if page is present then retunr the array value
+			$plugin_class = $pageArray[$_GET['id']];
+
+		} else {
+			$plugin_class = $plugin_info[$plugin_id]['page_type'];
+		}
+		
+
+	} else {
+		$plugin_class = $plugin_info[$plugin_id]['page_type'];	
+	}
+	
 } else {
 	$plugin_class = '';
 }
-
+echo get_filename_id();
 ?>
 <h1><a href="<?php echo $SITEURL; ?>" target="_blank" ><?php echo cl($SITENAME); ?></a></h1>
 <ul class="nav <?php echo $plugin_class; ?>">
@@ -29,7 +51,9 @@ if (get_filename_id() == 'load') {
 	<li id="nav_upload" ><a class="files" href="upload.php" accesskey="<?php echo find_accesskey(i18n_r('TAB_FILES'));?>" ><?php i18n('TAB_FILES');?></a></li>
 	<li id="nav_theme" ><a class="theme" href="theme.php" accesskey="<?php echo find_accesskey(i18n_r('TAB_THEME'));?>" ><?php i18n('TAB_THEME');?></a></li>
 	<li id="nav_backups" ><a class="backups" href="backups.php" accesskey="<?php echo find_accesskey(i18n_r('TAB_BACKUPS'));?>" ><?php i18n('TAB_BACKUPS');?></a></li>
+	<li id="nav_products" ><a class="products" href="load.php?id=dominion-jcart"><?php i18n('TAB_PRODUCTS');?></a></li>
 	<li id="nav_plugins" ><a class="plugins" href="plugins.php" accesskey="<?php echo find_accesskey(i18n_r('PLUGINS_NAV'));?>" ><?php i18n('PLUGINS_NAV');?></a></li>
+
 	
 	<?php exec_action('nav-tab');	?>
 	
